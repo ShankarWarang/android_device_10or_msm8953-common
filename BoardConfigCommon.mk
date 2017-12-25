@@ -41,7 +41,7 @@ BOARD_KERNEL_BASE := 0x80000000
 BOARD_RAMDISK_OFFSET := 0x01000000
 BOARD_KERNEL_PAGESIZE := 2048
 BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x01000000
-BOARD_CUSTOM_BOOTIMG_MK := $(VENDOR_PATH)/mkbootimg.mk
+#BOARD_CUSTOM_BOOTIMG_MK := $(VENDOR_PATH)/mkbootimg.mk
 KERNEL_TOOLCHAIN_PREFIX := arm-linux-androidkernel-
 TARGET_KERNEL_SOURCE := kernel/10or/G
 
@@ -76,3 +76,5 @@ TW_NEW_ION_HEAP := true
 RECOVERY_GRAPHICS_USE_LINELENGTH := true
 TW_SCREEN_BLANK_ON_BOOT := true
 TW_THEME := portrait_hdpi
+
+PRODUCT_COPY_FILES += device/10or/msm8953-common/libcryptfs_hw.so:system/vendor/lib/libcryptfs_hw.so \
